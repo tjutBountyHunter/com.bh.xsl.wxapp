@@ -1,0 +1,121 @@
+/* pages/detail/detail.wxss */
+
+/* swiper {
+  width: 100%;
+  height: 450rpx;
+}
+
+/*less sass*/
+
+/* swiper image {
+  width: 100%;
+  height: 450rpx;
+}  */
+
+.detail-cell {
+  border: 1px solid #f3f3f3;
+}
+
+.detail-money {
+  display: block;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.detail-money_text {
+  font-size: 42rpx;
+  color: red;
+}
+
+.detail-introduce {
+  padding: 10px, 15px;
+  position: relative;
+  text-align: center;
+}
+
+.img-box {
+  display: flex;
+  margin-top: 5px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.detail-introduce_img {
+  margin-top: 5px;
+  width: 340px;
+}
+
+.personal_tabbar {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  flex-direction: row;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  background-color: #ffffff;
+  justify-content: space-between;
+}
+
+.personal_like {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+  
+}
+
+
+.personal_like_img {
+  width: 28px;
+  height: 28px;
+  
+}
+
+.personal_talk_img {
+  width: 28px;
+  height: 28px;
+  
+}
+.personal_like_text {
+  font-size: 17px;
+  color: rgb(43, 40, 40)
+}
+.personal_button{
+  /* display: block;
+  float: right; */
+  display: flex;
+  width: 97px;
+  height: 40px;
+  margin-top: 5px;
+  margin-right: 15px;
+
+  background-color: #e82928;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.personal_tabbar_hd{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.button-view_text{
+  color: #fff;
+}
+  
+  
+  
+
+  
+  
+  
+

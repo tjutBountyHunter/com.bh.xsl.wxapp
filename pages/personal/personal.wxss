@@ -1,0 +1,53 @@
+/* pages/personal/personal.wxss */
+.page{
+  background-color:#ecedee;
+}
+.page__hd{
+  padding: 40px;
+  background-color: #a89370;
+}
+.weui-cells::before{
+  border: none;
+}
+/* .weui-cells::after{
+  border: none;
+} */
+
+.head_img{
+  border-radius: 50%;
+  overflow: hidden;
+}
+.real_name {
+  width: 54.25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  /* line-height: 25px; */
+  color: #fff;
+  background-color: #aa3c42;
+  border-radius: 25px;
+}
+.task_bd{
+  background-color: #fff;
+  margin-top: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.after_title{
+  
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.add_address{
+  background-color: #fff;
+  justify-content: center;
+  text-align: center;
+}
+.add_address_text{
+  color: #a1a2a3;
+  font-size: 15px;
+}
+.already_task{
+  font-size: 14px;
+  
+}

@@ -1,0 +1,144 @@
+<!--pages/issue/issue.wxml-->
+<view class="page">
+  <i-tabs current="{{ current }}" color="#a89370" width="100%" bindchange="handleChange">
+    <i-tab key="1" title="快递代取"></i-tab>
+    <i-tab key="2" title="物品悬赏"></i-tab>
+  </i-tabs>
+  <view class='tabs-item'>
+    <view wx:if="{{tab1}}" class='tab1'>
+      <view>
+        <i-panel>
+          <i-input value="{{ value1 }}" title="发布人" autofocus placeholder="真实姓名" />
+          <i-input value="{{ value2 }}" type="number" title="联系电话" placeholder="请输入手机号" maxlength='11' />
+        </i-panel>
+      </view>
+      <view style='border-bottom: 1px solid #f3f3f3;'>
+        <picker bindchange="bindPickerChange" value="{{index1}}" range="{{array}}">
+
+          <i-cell-group>
+            <i-cell title="选择你的地址" value="{{array[index1]}}" is-link></i-cell>
+          </i-cell-group>
+        </picker>
+
+      </view>
+      <view class='' style='border-bottom: 1px solid #f3f3f3;'>
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <!-- <view class="picker">
+            当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+          </view> -->
+          <i-cell-group>
+            <i-cell title="选择你的区域和楼号" value="{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}" is-link></i-cell>
+          </i-cell-group>
+        </picker>
+
+      </view>
+      <view style='border-bottom: 1px solid #f3f3f3;'>
+        <picker bindchange="bindExpressPickerChange" value="{{index2}}" range="{{kuaidi}}">
+
+          <i-cell-group>
+            <i-cell title="选择快递" value="{{kuaidi[index2]}}" is-link></i-cell>
+          </i-cell-group>
+        </picker>
+
+      </view>
+      <view>
+        <view class="issue_textarea">
+          <textarea class="weui-textarea" placeholder="描述你的任务" style="height: 3.3em" maxlength='200' />
+          <view class="weui-textarea-counter">0/200</view>
+        </view>
+      </view>
+      <i-panel>
+          
+          <i-input value="{{ value2 }}" type="number" title="悬赏金额" placeholder="请输入悬赏金（单位：元）" />
+        </i-panel>
+      <view>
+        <i-cell-group>
+          <i-cell title="是否接受猎人推荐">
+            <i-switch value="{{switch1}}" bind:change="onChange" slot="footer" checked='true'>
+              <i-icon type="right" slot="open"></i-icon>
+              <i-icon type="close" slot="close"></i-icon>
+            </i-switch>
+          </i-cell>
+        </i-cell-group>
+      </view>
+      <view class='issue_button'>
+        <button class="my-button">提交</button>
+      </view>
+    </view>
+    <view wx:if="{{tab2}}" class='tab2'>
+      <view>
+
+        <i-panel>
+          <i-input  title="发布人" autofocus placeholder="真实姓名" />
+          <i-input  type="number" title="联系电话" placeholder="请输入手机号" maxlength='11' />
+        </i-panel>
+      </view>
+      <view>
+        <view class='issue_uploader'>
+          <view class="weui-uploader">
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files" id="uploaderFiles">
+                <block wx:for="{{files}}" wx:key="*this">
+                  <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+                </block>
+              </view>
+              <view class="weui-uploader__input-box">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+
+            </view>
+            <view>
+              <text style='font-size:14px; color:#495060'>请上传你所需要的物品图片</text>
+            </view>
+          </view>
+
+        </view>
+      </view>
+      <view>
+        <view class="issue_textarea">
+          <textarea class="weui-textarea" placeholder="描述你的任务" style="height: 3.3em" maxlength='200' />
+          <view class="weui-textarea-counter">0/200</view>
+        </view>
+      </view>
+      <view style='border-bottom: 1px solid #f3f3f3;'>
+        <picker bindchange="bindPickerChange" value="{{index1}}" range="{{array}}">
+
+          <i-cell-group>
+            <i-cell title="选择你的地址" value="{{array[index1]}}" is-link></i-cell>
+          </i-cell-group>
+        </picker>
+
+      </view>
+      <view class='' style='border-bottom: 1px solid #f3f3f3;'>
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <!-- <view class="picker">
+            当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+          </view> -->
+          <i-cell-group>
+            <i-cell title="选择你的区域和楼号" value="{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}" is-link></i-cell>
+          </i-cell-group>
+        </picker>
+
+      </view>
+      <i-panel>
+          
+          <i-input value="{{ value2 }}" type="number" title="悬赏金额" placeholder="请输入悬赏金（单位：元）" />
+        </i-panel>
+      <view>
+        <i-cell-group>
+          <i-cell title="是否接受猎人推荐">
+            <i-switch value="{{switch1}}" bind:change="onChange" slot="footer" checked='true'>
+              <i-icon type="right" slot="open"></i-icon>
+              <i-icon type="close" slot="close"></i-icon>
+            </i-switch>
+          </i-cell>
+        </i-cell-group>
+      </view>
+      <view class='issue_button'>
+        <button class="my-button">提交</button>
+      </view>
+    </view>
+  </view>
+</view>

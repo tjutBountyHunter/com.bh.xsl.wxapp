@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "i-input":"/component/dist/input/index",
+    "i-panel":"/component/dist/panel/index",
+    "i-cell-group": "/component/dist/cell-group/index",
+    "i-cell": "/component/dist/cell/index",
+    "i-switch": "/component/dist/switch/index",
+    "i-tag": "/component/dist/tag/index",
+    "i-icon": "/component/dist/icon/index",
+    "i-tabs": "/component/dist/tabs/index",
+    "i-tab": "/component/dist/tab/index"
+  }
+}

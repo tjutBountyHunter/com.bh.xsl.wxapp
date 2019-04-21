@@ -1,0 +1,48 @@
+<!-- 用户头像 名称 是否实名认证 -->
+<view class='page'>
+  <view class="weui-cell detail-cell">
+    <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+      <!-- <image src="../images/pic_160.png" style="width: 50px; height: 50px; display: block" /> -->
+      <i-avatar size="large" shape="square">
+        <open-data type="userAvatarUrl" style=" width: 40px; height: 40px; display: block"></open-data>
+      </i-avatar>
+
+    </view>
+    <view class="weui-cell__bd">
+      <!-- <view>联系人名称</view> -->
+      <open-data type="userNickName" lang="zh_CN" style="font-size: 36rpx;"></open-data>
+      <image src='/images/detail/real_name_on.png' style=' margin-left:10px; width:26rpx; height:26rpx;'></image>
+      <view style="font-size: 13px;color: #888888;">一天前发布，发布于天津理工大学</view>
+    </view>
+  </view>
+  <view class='detail-money'>
+    <text class='detail-money_text'>¥5</text>
+  </view>
+  <view class='detail-introduce'>
+    <text class='detail-introduce_text'>苹果Watch3 42mm.(Gps)玫瑰金95新！全配！ 本交易仅支持自提、当面交易、邮寄</text>
+    <view class='img-box'>
+      <image class='detail-introduce_img' src='/images/detail/1.png' mode:widthFix></image>
+      <image class='detail-introduce_img' src='/images/detail/2.png' mode:widthFix></image>
+    </view>
+
+  </view>
+  <view class='personal_tabbar'>
+    <view class='personal_tabbar_hd'>
+      <view bindtap='onGoodTap' class='personal_like'>
+        <image wx:if ="{{imgOn}}" class='personal_like_img' src='/images/detail/good_off.png'></image>
+        <image wx:else ="{{imgOn}}" class='personal_like_img' src='/images/detail/good_on.png'></image>
+        <text class='personal_like_text'>收藏</text>
+      </view>
+      <view class='personal_like'>
+        <image class='personal_talk_img' src='/images/detail/talk_on.png'></image>
+        <text class='personal_like_text'>留言</text>
+      </view>
+    </view>
+
+    <view class='personal_button'>
+      <view class='button-view'>
+       <text class='button-view_text'>我想要</text>
+      </view>
+    </view>
+  </view>
+</view>

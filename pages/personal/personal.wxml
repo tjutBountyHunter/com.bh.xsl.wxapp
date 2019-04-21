@@ -1,0 +1,51 @@
+<!--pages/personal/personal.wxml-->
+<!-- <open-data type="userNickName" lang="zh_CN"></open-data> //获取用户昵称直接显示在小程序中 -->
+<view class="page">
+  <view class='page__hd'>
+
+    <view class='weui-cell'>
+      <view class="weui-cell__hd head_img" style="position: relative;margin-right: 10px;">
+        <!-- <image src="../images/pic_160.png" style="width: 50px; height: 50px; display: block" /> -->
+        <open-data type="userAvatarUrl" style=" width: 50px; height: 50px; display: block"></open-data>
+        <!-- <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">8</view> -->
+      </view>
+      <view class="weui-cell__bd">
+        <view>
+          <open-data type="userNickName" lang="zh_CN" style=" color:#fafafa; margin-left:10px"></open-data>
+
+        </view>
+        <view class='real_name' style="font-size: 13px;color: #fafafa;">实名认证</view>
+      </view>
+
+    </view>
+
+  </view>
+  <view class='page__bd'>
+    <view class='add_address'>
+      <image class='add_address_img' src='../../images/tabbar/add_address.png' style='width:10px;height:10px;'></image>
+      <text class="add_address_text">添加地址</text>
+    </view>
+    <view class='task_bd'>
+      <view class="weui-cells weui-cells_after-title after_title">
+        <view class="weui-cell weui-cell_access ">
+          <view class="weui-cell__bd already_task">已发布任务</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+            <view class="weui-badge weui-badge_dot" style="margin-left: 5px;margin-right: 5px;"></view>
+          </view>
+        </view>
+      </view>
+      <view class='border_line'></view>
+      <view class="weui-cells weui-cells_after-title after_title">
+        <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd already_task">已接受任务</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+            <view class="weui-badge weui-badge_dot" style="margin-left: 5px;margin-right: 5px;"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='page__ft'>
+    
+  </view>
+</view>

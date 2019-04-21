@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-tag":"/component/dist/tag/index",
+    "i-avatar": "/component/dist/avatar/index"
+  }
+}

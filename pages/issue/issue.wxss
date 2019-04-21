@@ -1,0 +1,53 @@
+/* pages/issue/issue.wxss */
+@import "/component/dist/tag/index.wxss";
+
+.issue_textarea {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 1px solid #f3f3f3;
+}
+
+.issue_title {
+  background-color: #f3f3f3;
+}
+
+/* .issue_tag{
+  height: 140rpx;
+  padding: 40rpx;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+} */
+
+.issue-title_text {
+  padding: 8px 15px;
+  font-size: 15px;
+}
+
+.issue_uploader {
+  padding: 10px 15px;
+}
+
+.issue_button {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.tabs-item.selected {
+  color: rgba(171, 149, 109, 0.8);
+  border-bottom: 2px solid rgba(171, 149, 109, 0.8);
+}
+
+.tabs-box {
+  display: flex;
+}
+
+
+
+.my-button {
+  color: #a89370;
+  width: 50%;
+  border: 1px solid #a89370;
+  background-color: #fff;
+}

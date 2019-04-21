@@ -1,0 +1,42 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/welcome/welcome",
+    "pages/issue/issue",
+    "pages/personal/personal",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#a89370",
+    "navigationBarTitleText": "悬赏令",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "position": "bottom",
+    "selectedColor":"#a89370",
+    "list": [
+      {
+        "pagePath": "pages/welcome/welcome",
+        "text": "大厅",
+        "iconPath": "images/tabbar/index_off.png",
+        "selectedIconPath": "images/tabbar/index_on.png"
+      },
+      {
+        "pagePath": "pages/issue/issue",
+        "text": "发布任务",
+        "iconPath": "images/tabbar/tabbar_add_off.png",
+        "selectedIconPath": "images/tabbar/tabbar_add_on.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "images/tabbar/mine_off.png",
+        "selectedIconPath": "images/tabbar/mine_on.png"
+      }
+    ]
+  }
+}
