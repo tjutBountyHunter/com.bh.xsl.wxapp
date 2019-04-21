@@ -1,0 +1,1 @@
+# com.bh.szx.wxapp
